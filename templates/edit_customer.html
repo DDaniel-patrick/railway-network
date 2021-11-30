@@ -1,0 +1,16 @@
+<h1>Edit Customer</h1>
+<a href="/back"><button >back</button></a>
+
+<form action="{{ url_for( 'edit_customer', id=delist.ID)}}" method="POST">
+
+    <input type="text" name="traveller_name" value="{{delist.traveller_name}}" placeholder="traveller_name">
+    <br><br>
+    <input type="text" name="from_where" value="{{delist.from_where}}" placeholder="From_where">
+    <br><br>
+    <input type="text" name="to_where" value="{{delist.to_where}}" placeholder="To_where">
+    <br><br>
+    <input type="date" name="departure_time" value="{{delist.departure_time}}">
+    <br><br>
+    <input type="submit" value="submit">
+
+</form>

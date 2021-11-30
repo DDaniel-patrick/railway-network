@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY_BOOKING</title>
+    <link rel="shortcut icon" href="/static/pictures/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"></head>
+<body>
+    <button type="button"><a href="/back">back</a></button>
+    <br><br>
+    <h1>Your travellers details</h1>
+
+    <button><a href="/new">Go back</a></button>
+
+<table>
+    <tr>
+        <th>Traveller_name</th>
+        <th>    </th>
+        <th>Preview details</th>     
+    </tr>
+
+{% for check in checks%}
+    <tr>
+    <td>{{check.traveller_name}}</td>
+    <td>   </td>
+    <td>{{check.from_text}}</td>
+
+    
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

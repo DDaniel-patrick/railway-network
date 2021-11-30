@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY_BOOKING</title>
+    <link rel="shortcut icon" href="/static/pictures/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"></head>
+<body>
+    <button><a href="/close"> back </a></button>
+   <form action="/clar" method="POST">
+       <fieldset >
+           <legend>Editing your details</legend>
+           traveller_name:<br>
+           <input type="text" name="traveller_name" placeholder="Your traveller name."><br>
+           <br>
+           Editor_panel:<br>
+           <textarea name="from_text" cols="20" rows="5" placeholder="write what you want the admin to edit in your travelling details. Thank you for choosing us">
+
+           </textarea>
+           <br><br>
+           <button type="button" onclick="alert('Are sure you want to submit.')"><input type="submit" value="submit"></button>
+
+       </fieldset>
+   </form>
+</body>
+</html>

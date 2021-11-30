@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY_BOOKING</title>
+    <link rel="shortcut icon" href="/static/pictures/main_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">   
+</head>
+<body>
+    <button><a href="/back">back</a></button>
+    <p style="text-decoration: underline; font-weight: bolder;">Your travelling name</p>
+    <h1>{{delist.traveller_name}}</h1>
+    <p style="text-decoration: underline; font-weight:bolder;"> The present location</p>
+    <p>{{delist.from_where}}</p>
+    <p style="text-decoration: underline; font-weight: bolder;">To this new destination</p>
+    <p>{{delist.to_where}}</p>
+    <p style="text-decoration: underline; font-weight: bolder;">Time for bus to leave</p>
+    <p>{{delist.departure_time}}</p>   
+</body>
