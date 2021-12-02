@@ -1,5 +1,6 @@
 import re
 from flask import Flask, render_template, request, redirect, session,url_for
+from flask.helpers import get_root_path
 from db import mydb, mycursor
 import random
 import string
@@ -14,15 +15,12 @@ randomString = str(randomlink)
 
 @app.route('/')
 def second():
-    rnd= randomString
     mycursor.execute(f'SELECT * FROM customers')
     customers = mycursor.fetchall()
-    return render_template('base.html', customers= customers,rnd=rnd)
+    return render_template('base.html', customers= customers)
 
 @app.route('/system', methods=['POST', 'GET'])
-
-def form():
-    
+def form(): 
     if request.method=='POST':
         _name= request.form['name']
         _password =request.form['password']
@@ -30,8 +28,7 @@ def form():
         _address= request.form['address']
         mycursor.execute(f'INSERT INTO customers(name, password, age, address) VALUES("{_name}", "{_password}","{_age}", "{_address}" )')
         mydb.commit()
-        return redirect('/system',)
-
+        return redirect('/system')
     return render_template('form.html')
 @app.route('/logout')
 def logout():
@@ -53,7 +50,7 @@ def logintrv():
         if verify:
             return render_template('travel_d.html', verify=verify)
         else:
-            msg='Invalid username/password '
+            msg='Invalid username/password !!!!!'
     return render_template('login_trvl.html' , msg=msg)
 # ====================
 # Admin login details
@@ -76,8 +73,8 @@ def html():
     return render_template('index.html', delist = delist)
 @app.route('/trvl_d', methods=['GET', 'POST'])
 def trvl_d():
-    if request.method == 'GET':
-        return render_template('travel_d.html')
+    # if request.method == 'GET':
+    #     return render_template('travel_d.html')
     if request.method == 'POST':
         _traveller_name = request.form['traveller_name']
         _from_where = request.form['from_where']
@@ -87,10 +84,14 @@ def trvl_d():
         val = (_traveller_name, _from_where, _to_where,_departure_time)
         mycursor.execute(sql, val)
         mydb.commit()
-        return redirect('/')
+        return render_template('win.html')
+    return render_template('travel_d.html')
 @app.route('/close')
 def close():
     return render_template('travel_d.html')
+@app.route('/bck')
+def bck():
+    return render_template('register.html')
 @app.route('/range', methods=['GET','POST'])
 def range():
     if request.method == 'GET':
@@ -143,19 +144,16 @@ def delete_customer(id):
     sql = f'DELETE FROM delists WHERE ID={id}'
     mycursor.execute(sql)
     mydb.commit()
-    return redirect('/')
+    return redirect('/back')
 # ==========================================
 @app.route('/clog', methods=['POST', 'GET'])
 def clog():
-    msg=""
     if request.method == "POST":
         _name = request.form['username']
         _password = request.form['password']
         if _name == name and _password == password:
-           return render_template('det.html', _name=_password )
-        else:
-            msg="invalid admin login details"
-        return render_template('register.html',msg=msg)
+            return render_template('det.html')
+    return render_template('register.html')
 #  ============================================
 # @app.route('/ind')
 # def ind():

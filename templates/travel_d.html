@@ -13,30 +13,30 @@
 <div class="std_reg">
         <a href=""><img src="/static/pictures/main_icon.png" class="logo" alt="home button"></a>
         <a href="/system" ><button class="clue"><span>back <br>&#8594 &#8594</span></button></a>
-        <h2 class="flask" style="padding-top: 5%;">WELCOME <span>{{verify.name}}</span><br><br></h2>
+
         <center><br>
           
-        <h1 style="font-size: 5vh;">DO YOUR BOOKINGS.</h1>
+        <h1 style="font-size: 5vh; text-decoration: underline;">DO YOUR BOOKINGS.</h1>
         <form action="/trvl_d" method="POST">
-
+            <h2 class="flask" style="padding-top: 5%;">WELCOME <b> -- </b><u style="text-transform: uppercase;">{{verify.name}}</u><br><br></h2>
         <br>
         <br>
-            <input type="text" class="box"  name="traveller_name" placeholder="traveller_name">
+            <input type="text" class="box"  name="traveller_name" placeholder="traveller_name" required>
             <br><br>
-            <input type="text" class="box"  name="from_where" placeholder="from_where">
+            <input type="text" class="box"  name="from_where" placeholder="from_where" required>
             <br><br>
-            <input type="text"class="box"  name="to_where" placeholder="to_where">
+            <input type="text"class="box"  name="to_where" placeholder="to_where" required>
             <br><br>
-            <input type="date" class="bos"   name="departure_time">
+            <input type="date" class="bos" style="border-radius: 9px;"  name="departure_time" required>
             <br><br>
-            <input type="submit" class="box" value="submit">
-            <br>
+            <input type="submit" class="box" value="submit" required>
+            <br><br>
         </center>
         </form>
     </div><hr style="background-color:2px black;">
        <div class="student">
         <center>
-            <p class="p_tag">Do you have error in your details.. please contact the admin</p><br><a href="/range" ><button class="reg">Admin</button></a>
+            <p class="p_tag">Do you have error in your details.. please contact the admin</p><br><a href="/range" ><button class="reg">Admin</button></a><br>
         </center>
            <br>
     </div>

@@ -123,13 +123,31 @@
             opacity: 1;
             right: 0;
         }
+        .std_all{
+            background-color: black;
+            color: blanchedalmond;
+        }
+        .vex{
+           background-color: black;
+           color: blanchedalmond;
+           height: 3vw;
+           width: 18vw;
+           border-radius: 20px;
+        }
+        .vex:hover{
+            background-color:rgb(223, 12, 12);
+            color: black;
+            transition:all ease-in-out 0.6s;
+            height: 4vw;
+            width: 20vw;
+        }
+
         .std_reg{
             /* background-color: burlywood; */
             background-image: url("/static/pictures/pexel\ \(10\).jpg");
-
             color: rgb(228, 228, 228);
         }
-        .student{
+        .student{color: rgb(228, 228, 228);
             background-color: burlywood;
             color: rgb(0, 0, 0);
 
@@ -138,7 +156,7 @@
             height: 39px;
             background-color: rgb(255, 213, 158);
             margin-top: 1%;
-            color: blanchedalmond;
+            color: rgb(0, 0, 0);
             border-style: ridge;
             box-sizing: border-box;
             border-radius: 40px;
@@ -210,6 +228,11 @@
 .footer{
     color: black;
 }
+.foots{
+    background-color: black;
+    height: 29vw;
+    width: 99vw;
+}
 .footer:hover{
 background-color: rgb(218, 0, 0);
 color:white;
@@ -225,4 +248,94 @@ text-decoration: underline;
     margin-right: 7px;
     text-decoration: black;
     font-size: larger;
+}
+.preview{
+    margin-left: 400%;
+    padding-left: 48%;
+}
+.arrange{
+    text-align: center;
+    padding-left: 25%;
+}
+.from_text{
+    padding-left:1%;
+    text-align: center;
+    color: rgb(255, 196, 196);
+}
+.from_text p{
+    margin-left: 60%;
+}
+.down:hover{
+    transition: all ease-in-out 0.9s;
+    height: 60vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:rgb(14, 11, 11) ; 
+}
+.down{
+    color: black;
+    height: 60vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.std_rep{
+    background-image: url("/static/pictures/pexel\ \(10\).jpg");
+    height: 10%;
+    color: rgb(228, 228, 228);
+}
+
+
+
+.dow{
+    color: black;
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black; 
+}
+.check{
+    height: 90%;
+    width:10%;
+    border-radius: 30%;
+    background-color: black;
+    color: rgb(221, 0, 0);
+}
+.check:hover{
+    background-color: white;
+    color: black;
+    border-radius: 15%;
+}
+.end{
+    background-color: black;
+    height: 21vw;
+    width: 99vw; 
+}
+
+.all{
+    background-color: black;
+    color: white;
+}
+
+.cls{
+    background-color: black;
+    color: white;
+}
+.btn-cls{
+    font-size: x-large;
+    height: 4vw;
+    width: 25%;
+    border-radius: 20px;
+}
+.btn-cls:hover{
+    background-color: rgb(221, 0, 0);
+    color: black;
+    width:30%;
+    transition: all ease-in-out 0.8s;
 }
