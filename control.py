@@ -1,4 +1,3 @@
-import re
 from flask import Flask, render_template, request, redirect, session,url_for
 from flask.helpers import get_root_path
 from db import mydb, mycursor
